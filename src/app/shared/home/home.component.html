@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="form-group row">
+      <table>
+        <tr>
+          <th>Country Name</th>
+          <th>Time Zone Name</th>
+          <th>Time Zone Abbreviation</th>
+        </tr>
+        <tr *ngFor="let d of data">
+          <td>{{d.location}}</td>
+          <td>{{d.timezoneName}}</td>
+          <td>{{d.timezoneName}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,98 @@
+<!-- <div class="container">
+    <div class="form-group">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+            <tr *ngFor="let product of productList">
+                <td>{{product.name}}</td>
+                <td>{{product.description}}</td>
+                <td>
+                    <img style="height: 50px; width: 70px;" src="http://localhost:3000/{{product.productImage}}">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="form-group">
+        <button (click)="openDialog()">Create</button>
+    </div>
+</div> -->
+
+<div class="con">
+    <div class="gallery">
+        <div class="content"  *ngFor="let product of productList">
+            <img src="http://localhost:3000/{{product.productImage}}" alt="">
+            <h3>{{product.name}}</h3>
+            <p>Lorem Ipsum is simply....</p>
+            <h6>{{product.price | currency:'&#2547;'}}</h6>
+            <ul>
+                <ngb-rating class="fa checked" [max]="5" [(rate)]="product.rating"></ngb-rating>
+                <!-- <li><fa-icon [icon]="['fas', 'star']" class="fa checked"></fa-icon></li> -->
+                <!-- <li><fa-icon [icon]="['fas', 'star']" class="fa checked"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']" class="fa checked"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']" class="fa checked"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']" class="fa checked"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']" class="fa"></fa-icon></li> -->
+            </ul>
+            <button class="buy-1">Buy Now</button>
+        </div>
+        <!-- <div class="content">
+            <img src="http://localhost:3000/public/images/1646738002082_test1.jpg" alt="">
+            <h3>Dove</h3>
+            <p>Lorem Ipsum is simply....</p>
+            <h6>$100.00</h6>
+            <ul>
+                <li><fa-icon [icon]="['fas', 'star']" class="fa checked"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']" class="fa checked"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']" class="fa checked"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']" class="fa"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']" class="fa"></fa-icon></li>
+            </ul>
+            <button class="buy-2">Buy Now</button>
+        </div>
+        <div class="content">
+            <img src="http://localhost:3000/public/images/1646738002082_test1.jpg" alt="">
+            <h3>Dove</h3>
+            <p>Lorem Ipsum is simply....</p>
+            <h6>$100.00</h6>
+            <ul>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+            </ul>
+            <button class="buy-3">Buy Now</button>
+        </div>
+        <div class="content">
+            <img src="http://localhost:3000/public/images/1646738002082_test1.jpg" alt="">
+            <h3>Dove</h3>
+            <p>Lorem Ipsum is simply....</p>
+            <h6>$100.00</h6>
+            <ul>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+            </ul>
+            <button class="buy-4">Buy Now</button>
+        </div>
+        <div class="content">
+            <img src="http://localhost:3000/public/images/1646738002082_test1.jpg" alt="">
+            <h3>Dove</h3>
+            <p>Lorem Ipsum is simply....</p>
+            <h6>$100.00</h6>
+            <ul>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+                <li><fa-icon [icon]="['fas', 'star']"></fa-icon></li>
+            </ul>
+            <button class="buy-1">Buy Now</button>
+        </div> -->
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="container">
+    <form [formGroup]="formGroup">  
+        <div class="row">
+            <div class="col-25"> 
+                <label for="name">Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" formControlName="name">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-25">
+                <label for="description">Description</label>
+            </div>
+            <div class="col-75">
+                <textarea type="text" formControlName="description"> </textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="productImage">Product Image</label>
+            </div>
+            <div class="col-75">
+                <input type="file" (change)="uploadFile($event)">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25" *ngIf="preview && preview !== null">
+                <img [src]="preview" [alt]="formGroup.value.name" class="image">
+                <div class="middle">
+                    <div class="text">{{formGroup.value.name}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="price">Price</label>
+            </div>
+            <div class="col-75">
+                <textarea type="number" formControlName="price"> </textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="rating">Rating</label>
+            </div>
+            <div class="col-75">
+                <textarea type="number" formControlName="rating"> </textarea>
+            </div>
+        </div>
+        <div class="row">
+            <button type="submit" (click)="createProduct()">Save</button>
+            <button mat-button mat-dialog-close>Cancel</button>
+        </div>
+    </form>
+</div>
